@@ -1,3 +1,4 @@
+// transpose, symmetric
 #include <stdio.h>
 
 int main(void)
