@@ -1,0 +1,12 @@
+Some functions under <string.h> header file to manipulate strings
+
+strlen(str)
+strcmp(str)
+strcat(str1, str2) 
+strcpy(str1, str2)
+strupr(str) => to upper
+strlwr(str) => to lower
+strrev(str) => reverse
+strncmp(str1, str2, n) => compare upto nth character
+strsmpi(str1, str2) => i for ignore, it returns 0 if we provide "good" and "Good"
+strncat(str1, str2, n) => concatenate upto nth character

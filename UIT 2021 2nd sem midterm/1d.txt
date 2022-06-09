@@ -1,0 +1,4 @@
+if-else can evaluate integer, character, boolean, floating-point number on the other hand switch case can evaluate int and char.
+when we are checking multiple options using if-else, it becomes kinda slow unlike switch case.
+--> so in general if-else is more versatile than switch case --> if-else is better
+--> but again when we are checking multiple options associating with int or char, switch case is the better option as it speeds up the program.

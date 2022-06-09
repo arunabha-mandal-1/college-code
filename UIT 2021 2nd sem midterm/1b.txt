@@ -1,0 +1,6 @@
+We have an integer array  arr[1, 2, 3, 4, ........................., 50].
+Base address is 1000
+
+address of arr[37] is = base_address + (37 * 2) // 16 bit OS
+address of arr[37] is = base_address + (37 * 4) // 32 bit OS
+address of arr[37] is = base_address + (37 * 4) // 64 bit OS

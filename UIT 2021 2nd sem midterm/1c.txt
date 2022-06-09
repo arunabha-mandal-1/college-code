@@ -1,0 +1,9 @@
+local variable ->   a. declared locally means inside any function
+                    b. it's scope is only in the function
+
+
+global variable ->  a. declared globally means it's not declared inside any function
+                    b. we can use it in any function
+
+* if a variable has to be used in function, both local and global variable have the same name, the local variable will be given preference.
+

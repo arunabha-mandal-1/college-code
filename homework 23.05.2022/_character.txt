@@ -1,0 +1,9 @@
+Some function under <ctype.h> to manipulate character
+
+isupper(ch)
+islower(ch)
+isalpha(ch)
+isalnum(ch) **
+isdigit(ch) **
+tolower(ch)
+toupper(ch)
