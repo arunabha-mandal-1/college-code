@@ -17,7 +17,7 @@ int main(void)
     secondsLeft = secondsLeft % 60; // apply
 
 
-    printf("%d days %d hours %d minues %d seconds", days, hours, minutes, secondsLeft);
+    printf("%d days %d hours %d minutes %d seconds", days, hours, minutes, secondsLeft);
 
     return 0;
 }
