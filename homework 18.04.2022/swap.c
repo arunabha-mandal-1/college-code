@@ -8,7 +8,7 @@ int main()
     printf("The value of a before swapping %d\n", a);
     printf("The value of b before swapping %d\n", b);
 
-    // swaping 
+    // swapping 
     int temp = a;
     a = b;
     b = temp;
