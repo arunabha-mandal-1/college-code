@@ -3,14 +3,14 @@
 
 bool isPrime(int number)
 {
-    if(number < 2)
+    if (number < 2)
     {
         return false;
     }
     int c = 2;
-    while(number > c)
+    while (number > c)
     {
-        if(number % c == 0)
+        if (number % c == 0)
         {
             return false;
         }
@@ -33,13 +33,13 @@ bool isArmstrong(int number)
 {
     int sum = 0;
     int temp = number;
-    while(number > 0)
+    while (temp > 0)
     {
-        int rem = number % 10;
+        int rem = temp % 10;
         sum += (rem * rem * rem);
-        number /= 10;
+        temp /= 10;
     }
-    if(sum == temp)
+    if (sum == number)
     {
         return true;
     }
@@ -48,17 +48,17 @@ bool isArmstrong(int number)
 
 void positiveNegativeZero(int number)
 {
-    if(number == 0)
+    if (number == 0)
     {
         printf("Zero.\n");
         return;
     }
-    if(number > 0)
+    if (number > 0)
     {
         printf("Positive.\n");
         return;
     }
-    if(number < 0)
+    if (number < 0)
     {
         printf("Negative.\n");
         return;
@@ -67,66 +67,76 @@ void positiveNegativeZero(int number)
 
 int main()
 {
-    int choice;
-    printf("01. Prime Number.\n");
-    printf("02. Even/Odd Number.\n");
-    printf("03. Armstrong Number.\n");
-    printf("04. Positive/Negative/Zero.\n");
+    while (1)
+    {
+        int choice;
+        level:
+        printf("\n1. Prime Number.\n");
+        printf("2. Even/Odd Number.\n");
+        printf("3. Armstrong Number.\n");
+        printf("4. Positive/Negative/Zero.\n");
+        printf("5. Quit.\n");
 
-    printf("Enter your choice : ");
-    scanf("%d", &choice);
+        printf("Enter your choice : ");
+        scanf("%d", &choice);
 
-    if(choice > 4 || choice < 1)
-    {
-        printf("Wrong choice.\n");
-        return -1;
-    }
+        if(choice==5)return 0;
 
-    int number;
-    printf("\nEnter the number you want to check for : ");
-    scanf("%d", &number);
+        if (choice > 5 || choice < 1)
+        {
+            printf("Wrong choice.\n");
+            goto level;
+            // return -1;
+        }
 
-    if(choice == 1)
-    {
-        if(isPrime(number))
+        int number;
+        printf("\nEnter the number you want to check for : ");
+        scanf("%d", &number);
+
+        // if(choice==5) return 0;
+
+        if (choice == 1)
         {
-            printf("Prime Number.\n");
-            return 0;
+            if (isPrime(number))
+            {
+                printf("Prime Number.\n");
+                // return 0;
+            }
+            else
+            {
+                printf("Not a prime number.\n");
+                // return 0;
+            }
         }
-        else
+        else if (choice == 2)
         {
-            printf("Not a prime number.\n");
-            return 0;
+            if (isEven(number))
+            {
+                printf("Even number.\n");
+                // return 0;
+            }
+            if (isOdd(number))
+            {
+                printf("Odd number.\n");
+                // return 0;
+            }
         }
-    }
-    else if(choice == 2)
-    {
-        if(isEven(number))
+        else if (choice == 3)
         {
-            printf("Even number.\n");
-            return 0;
+            if (isArmstrong(number))
+            {
+                printf("Armstrong number.\n");
+                // return 0;
+            }
+            else
+            {
+                printf("Not a armstrong number.\n");
+                // return 0;
+            }
         }
-        if(isOdd(number))
+        else if (choice == 4)
         {
-            printf("Odd number.\n");
-            return 0;
+            positiveNegativeZero(number);
         }
-    }
-    else if(choice == 3)
-    {
-        if(isArmstrong(number))
-        {
-            printf("Armstrong number.\n");
-            return 0;
-        }
-        else
-        {
-            printf("Not a armstrong number.\n");
-            return 0;
-        }
-    }
-    else if(choice == 4)
-    {
-        positiveNegativeZero(number);
     }
 }
