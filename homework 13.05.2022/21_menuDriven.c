@@ -6,24 +6,22 @@ int main()
 	int choiceFirst;
 	while(1)
 	{
-		printf("01. Arithmetic operator.\n");
-		printf("02. Relational operator.\n");
-		printf("03. Logical operator.\n");
-		printf("04. Increment/decrement operator.\n");
-		printf("05. Bitwise operator.\n");
-		printf("06. Assignment operator/Compound assignment.\n");
-		printf("07. Ternary operator.\n");
-		printf("08. sizeof operator.\n");
+		level:
+		printf("\n1. Arithmetic operator.\n");
+		printf("2. Relational operator.\n");
+		printf("3. Logical operator.\n");
+		printf("4. Increment/decrement operator.\n");
+		printf("5. Bitwise operator.\n");
+		printf("6. Assignment operator/Compound assignment.\n");
+		printf("7. Ternary operator.\n");
+		printf("8. sizeof operator.\n");
+		printf("9. QUIT.\n");
 		
-		printf("Enter a choice : ");
+		printf("\nEnter a choice : ");
 		scanf("%d", &choiceFirst);
-		
-		if(choiceFirst < 1 || choiceFirst > 8)
-		{
-			printf("Invalid Input.\n");	
-			return -1;
-		}
-		else if(choiceFirst == 1)
+
+		if(choiceFirst==9) return 0;
+		if(choiceFirst == 1)
 		{
 			int choiceSecond;
 			printf("01. Addition\n02. Substraction\n03. Multiplication\n04. Division\n05. Modulo\n");
@@ -33,7 +31,8 @@ int main()
 			if(choiceSecond < 1 || choiceSecond > 5)
 			{
 				printf("Invalid Input.\n");
-				return -1;
+				goto level;
+				// return -1;
 			}
 			printf("Enter two numbers you want to do operation with : ");
 			float num1, num2;
@@ -62,7 +61,7 @@ int main()
 		}
 		else if(choiceFirst == 2)
 		{
-			printf("\n01. Greater than\n02. Less than\n03. Greater than or equaol to\n04. Less than or equal to\n05. Not equal to");
+			printf("\n01. Greater than\n02. Less than\n03. Greater than or equaol to\n04. Less than or equal to\n05. Not equal to\n");
 			int choiceThird;
 			printf("Enter choice : ");
 			scanf("%d", &choiceThird);
@@ -70,7 +69,8 @@ int main()
 			if(choiceThird < 1 || choiceThird > 5)
 			{
 				printf("Invalid Input\n");
-				return -1;
+				goto level;
+				// return -1;
 			}
 			
 			printf("Enter two numbers you want to check for : ");
@@ -143,7 +143,8 @@ int main()
 			if(choiceForth < 1 || choiceForth > 3)
 			{
 				printf("Invalid Choice.\n");
-				return -1;
+				goto level;
+				// return -1;
 			}
 			
 			printf("Enter two numbers you want to check for : ");
@@ -195,7 +196,7 @@ int main()
 		}
 		else if(choiceFirst == 4)
 		{
-			printf("01. Increment\n02. Decrement");
+			printf("01. Increment\n02. Decrement\n");
 			int choiceFifth;
 			printf("Enter your choice : ");
 			scanf("%d", &choiceFifth);
@@ -203,7 +204,8 @@ int main()
 			if(choiceFifth < 1 || choiceFifth > 2)
 			{
 				printf("Invalid Input.\n");
-				return -1;
+				goto level;
+				// return -1;
 			}
 			
 			if(choiceFifth == 1)
@@ -233,7 +235,8 @@ int main()
 			if(choiceSixth < 1 || choiceSixth > 4)
 			{
 				printf("Invalid input.\n");
-				return -1;
+				goto level;
+				// return -1;
 			}
 			
 			printf("Enter two number you want to do operation with : ");
@@ -256,7 +259,8 @@ int main()
 			if(choiceSeventh < 1 || choiceSeventh > 2)
 			{
 				printf("Invalid input.\n");
-				return -1;
+				goto level;
+				// return -1;
 			}
 			
 			if(choiceSeventh == 1)
@@ -283,7 +287,7 @@ int main()
 		}
 		else if(choiceFirst == 7)
 		{
-			printf("Max among three numbers.");
+			printf("Max among three numbers.\n");
 			printf("Enter three you want to check for : ");
 			
 			float num1, num2, num3;
@@ -296,11 +300,12 @@ int main()
 		{
 			printf("\n\nSize of an integer is %d byte.\n", sizeof(int));
 			printf("Size of an float is %d byte.\n", sizeof(float));
-			printf("nSize of an char is %d byte.\n", sizeof(char));
-			printf("nSize of an double is %d byte.\n", sizeof(double));
-			return 0;
-		}
+			printf("Size of an char is %d byte.\n", sizeof(char));
+			printf("Size of an double is %d byte.\n", sizeof(double));
+			// return 0;
+			// goto level;
+		}else return 0;
 	}
 	
-	return 0;	
+	// return 0;	
 }
