@@ -40,28 +40,28 @@ int main()
 			
 			if(choiceSecond == 1)
 			{
-				printf("Result is %f.\n", num1 + num2);	
+				printf("Result is %f\n", num1 + num2);	
 			}
 			else if(choiceSecond == 2)
 			{
-				printf("Result is %f.\n", num1 - num2);	
+				printf("Result is %f\n", num1 - num2);	
 			}
 			else if(choiceSecond == 3)
 			{
-				printf("Result is %f.\n", num1 * num2);	
+				printf("Result is %f\n", num1 * num2);	
 			}
 			else if(choiceSecond == 4)
 			{
-				printf("Result is %f.\n", num1 / num2);	
+				printf("Result is %f\n", num1 / num2);	
 			}
 			else if(choiceSecond == 5)
 			{
-				printf("Result is(in integer) %d.\n", (int)num1 % (int)num2);	
+				printf("Result is(in integer) %d\n", (int)num1 % (int)num2);	
 			}
 		}
 		else if(choiceFirst == 2)
 		{
-			printf("\n01. Greater than\n02. Less than\n03. Greater than or equaol to\n04. Less than or equal to\n05. Not equal to\n");
+			printf("\n01. Greater than\n02. Less than\n03. Greater than or equal to\n04. Less than or equal to\n05. Not equal to\n");
 			int choiceThird;
 			printf("Enter choice : ");
 			scanf("%d", &choiceThird);
@@ -186,11 +186,11 @@ int main()
 				
 				if(!num2)
 				{
-					printf("First number is zero.\n");
+					printf("Second number is zero.\n");
 				}
 				else
 				{
-					printf("First number is not zero.\n");
+					printf("Second number is not zero.\n");
 				}
 			}
 		}
@@ -244,9 +244,9 @@ int main()
 			scanf("%d%d", &num1, &num2);
 			
 			if(choiceSixth == 1) printf("%d & %d = %d\n", num1, num2, (num1&num2));
-			if(choiceSixth == 2) printf("%d | %d = %d\n", num1, num2, (num1|num2));
-			if(choiceSixth == 3) printf("~%d = %d, ~%d = %d", num1, (~num1), num2, (~num2));
-			if(choiceSixth == 4) printf("%d ^ %d = %d\n", num1, num2, (num1^num2));
+			else if(choiceSixth == 2) printf("%d | %d = %d\n", num1, num2, (num1|num2));
+			else if(choiceSixth == 3) printf("~%d = %d, ~%d = %d", num1, (~num1), num2, (~num2));
+			else if(choiceSixth == 4) printf("%d ^ %d = %d\n", num1, num2, (num1^num2));
 			
 		}
 		else if(choiceFirst == 6)
@@ -288,7 +288,7 @@ int main()
 		else if(choiceFirst == 7)
 		{
 			printf("Max among three numbers.\n");
-			printf("Enter three you want to check for : ");
+			printf("Enter three numbers you want to check for : ");
 			
 			float num1, num2, num3;
 			scanf("%f%f%f", &num1, &num2, &num3);
