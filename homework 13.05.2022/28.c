@@ -25,7 +25,7 @@ int main()
            while(binary > 0)
            {
                int rem = binary % 10;
-               if(rem != 0 || rem != 1)
+               if(rem != 0 && rem != 1)
                {
                    printf("Error! Please enter binary number!\n");
                    break;

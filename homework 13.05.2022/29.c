@@ -12,17 +12,17 @@ int main(void)
         int j = 1;
         for(j; j <= (num - i); j++)
         {
-            printf("  ");
+            printf("   ");
         }
         for(j; j <= num; j++)
         {
-            printf("%d ", temp);
+            printf("%2d ", temp);
             temp++;
         }
         temp -= 2;
         for(int k = 1; k < i; k++)
         {
-            printf("%d ", temp);
+            printf("%2d ", temp);
             temp--;
         }
         printf("\n");

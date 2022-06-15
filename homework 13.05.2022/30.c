@@ -17,7 +17,8 @@ int main(void)
             {
                 c=1;
             }
-            else{
+            else
+            {
                 c=c*(i-j+1)/j;
             }
             printf("%d ", c);

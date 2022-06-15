@@ -7,17 +7,22 @@ int main()
     int number, count = 0;
     printf("Enter the number : ");
     scanf("%d", &number);
-
+    int temp = number;
+    if(temp<0){
+        printf("Minus ");
+        temp = -temp;
+    }
     int *ptr = (int *)malloc(count * sizeof(int));
-    printf("%x\n", ptr);
+    // printf("%x\n", ptr);
+    if(ptr==NULL) return 1;
 
-    while(number > 0)
+    while(temp > 0)
     {
-        int rem = number % 10;
+        int rem = temp % 10;
         count++;
-        ptr = realloc(ptr, count * sizeof(int));
+        ptr = (int *)realloc(ptr, count * sizeof(int));
         ptr[count - 1] = rem;
-        number /= 10;
+        temp /= 10;
     }
 
     for(int i = count - 1; i >= 0; i--)
