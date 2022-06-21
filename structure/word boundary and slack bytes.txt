@@ -1,0 +1,8 @@
+Computer stores structures using the concept of word boundary whose size is machine dependent. In a computer with 2 bytes word boundaries, the members of a structure are stored left-aligned on the word boundary. The character data takes one byte and integer data takes two bytes.*1(this one is kinda vague)
+One byte between them is known as slack bytes.
+
+The microprocessors access the data that is present in the even addresses faster than that of the data that is present in the odd addresses.*2
+
+
+
+https://www.geeksforgeeks.org/slack-bytes-in-structures-explained-with-example/
