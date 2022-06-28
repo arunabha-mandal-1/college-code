@@ -1,0 +1,5 @@
+* C does not permit relational operation on structure variables.
+    lets say s1 and s2 are two structures, we cannot do (s1==s1) comparison.
+* We can use assignment operator on structure variables.
+    like s1=s2 => this one is valid
+* We access structure members using member operator(.), more precisely dot operator.
