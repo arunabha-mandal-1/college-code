@@ -1,0 +1,24 @@
+A bit field is a set of adjacent bits whose size can be form 1 to 16 bits in length. A word can therefore be divided in bit fields.
+
+In C, we can specify size (in bits) of structure and union members. The idea is to use memory efficiently when we know that the value of a field or group of fields will never exceed a limit or is within a small range. 
+
+syntax=>
+
+struct tag-name
+{
+    datatype1 member1 : bit-length,
+    datatype1 member1 : bit-length,
+    datatype1 member3 : bit-length
+};
+
+https://www.geeksforgeeks.org/bit-fields-c/
+
+When we know our value won't exceed a certain limit, we use bit fields.
+Like date won't exceed 31, month 12 and so on.
+
+Be aware of signed int and unsigned int because their range differs.
+
+/\ Did not get how the size is being compressed.
+
+We cannot have pointers to bit field members as they may not start at a byte boundary. 
+    printf("Address of t.x is %p", &t.x); => this sentence is invalid given that t is a structure
