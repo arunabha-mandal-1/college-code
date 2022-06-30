@@ -1,0 +1,9 @@
+fseek() returns integer value > 0 if it succesfully sets the stream to the beginning
+                              > other value indicates zero
+
+rewind's return type is void.
+
+So we can handle error with fseek but not with rewind.
+There is no way to know whether rewind has set the file stream to the beginning.
+
+We should avoid rewind() and use fseek()

@@ -1,0 +1,34 @@
+There are two types of input/output functions in C : 
+    * Low level i/o functions
+        * provide direct access to files and devices.
+        * are complex (Buffer management is to done by the programmer)
+        * are faster as compared to the high-level I/O.
+        * use a “file descriptor”* to track the status of the file.
+            1. Open()
+            2. Close()
+            3. Read()
+            4. Write()
+    * High level i/o functions
+        * are more flexible and usually more convenient.
+        * hide complexity from the programmer.
+        * are slower as compared to the low-level I/O.
+            1. fprintf ( )	        write data into a file
+            2. fscanf ( )	        read data from a file
+            3. putc ( )/ fputc()	write a character into a file
+            4. getc ( ) /fgetc()	read a character from a file
+            5. putw ( )	            write a number into a file
+            6. getw ( )	            read number from a file
+            7. fputs ( )	        write a string into a file
+            8. fgets ( )	        read a string from a file
+            9. fread()	            read an entire record from a file
+            10.fwrite()	            write an entire record into a file
+            and so on.
+
+*“FILE DESCRIPTOR” : When you perform any read or write operations you need to open a file. You can create a new file to write to it, or you can use an existing file by discarding its previous contents. You need to specific permissions to be able to perform read or write operations.
+
+When you write to a file, the system checks for the existing permissions and if you have permission then the system returns a non-negative integer called a “file descriptor”. In low-level I/O functions a file descriptor is used to identity a file for all subsequent read or write operations.
+
+Low level functions are used for :
+    . Accessing files and devices directly.
+    . Reading binary files in large chunks.
+    . Performing I/O operations quickly and efficiently.

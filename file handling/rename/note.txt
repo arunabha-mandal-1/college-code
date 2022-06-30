@@ -1,0 +1,13 @@
+rename() function is used to change the name of the file or directory i.e. from old_name to new_name without changing the content present in the file. This function takes name of the file as its argument.
+
+If new_name is the name of an existing file in the same folder then the function may either fail or override the existing file, depending on the specific system and library implementation.
+
+Syntax:
+    int rename (const char *old_name, const char *new_name);
+
+Parameters:
+    old_name : Name of an existing file to be renamed.
+    new_name : String containing new name of the file.
+
+Return:
+    Return type of function is an integer. If the file is renamed successfully, zero is returned. On failure, a nonzero value is returned.

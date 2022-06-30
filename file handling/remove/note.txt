@@ -1,0 +1,12 @@
+Description:
+    The C library function int remove(const char *filename) deletes the given filename so that it is no longer accessible.
+
+Declaration:
+    Following is the declaration for remove() function.
+    int remove(const char *filename)
+
+Parameters:
+    filename − This is the C string containing the name of the file to be deleted.
+
+Return Value:
+    On success, zero is returned. On error, -1 is returned, and errno is set appropriately.

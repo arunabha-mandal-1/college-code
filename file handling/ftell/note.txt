@@ -1,0 +1,3 @@
+ftell() in C is used to find out the position of file pointer in the file with respect to starting of the file. Syntax of ftell() is: 
+
+long ftell(FILE *pointer)

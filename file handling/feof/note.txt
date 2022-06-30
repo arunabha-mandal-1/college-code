@@ -1,0 +1,3 @@
+int feof ( FILE * stream );
+
+Checks whether the end-of-File indicator associated with stream is set, returning a value different from zero if it is.

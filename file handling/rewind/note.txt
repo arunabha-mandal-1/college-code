@@ -1,0 +1,6 @@
+The C library function void rewind(FILE *stream) sets the file position to the beginning of the file of the given stream.
+
+Declaration:
+    Following is the declaration for rewind() function.
+
+    void rewind(FILE *stream)

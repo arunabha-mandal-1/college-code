@@ -1,0 +1,12 @@
+Description:
+    The C library function int ferror(FILE *stream) tests the error indicator for the given stream.
+
+Declaration:
+    Following is the declaration for ferror() function.
+    int ferror(FILE *stream)
+
+Parameters:
+    stream − This is the pointer to a FILE object that identifies the stream.
+
+Return Value:
+    If the error indicator associated with the stream was set, the function returns a non-zero value else, it returns a zero value.
