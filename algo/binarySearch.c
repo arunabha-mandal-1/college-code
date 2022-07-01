@@ -2,8 +2,8 @@
 
 int binarySearch(int [], int, int, int);
 int main(){
-    int arr[6] = {2, 1, 4, 3, 5, 9};
-    int flag = binarySearch(arr, 0, 5, 9);
+    int arr[6] = {3, 4, 5, 7, 8, 12};
+    int flag = binarySearch(arr, 0, 5, 7);
     if(flag==-1)
         printf("Not found.\n");
     else
