@@ -5,9 +5,9 @@ int smallest(int[], int, int, int);
 
 int main()
 {
-    int arr[] = {4, 5, 1, 3, 2};
-    selection(arr, 5);
-    for(int i=0; i<5; i++)
+    int arr[] = {25, 18, 42, 06, 36, 64, 45};
+    selection(arr, 7);
+    for(int i=0; i<7; i++)
     {
         printf("%d ", arr[i]);
     }
