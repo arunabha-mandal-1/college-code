@@ -43,6 +43,69 @@ void traverse(intnode *p){
         printf("%d ", t->element);
         t=t->next; // shifting to the next element
     }
+    printf("\n");
+}
+
+// insertion
+void insert(intnode **p, intnode *t, int i){
+    intnode *q, *x;
+    int j;
+    if(i==0){
+        t->next=*p;
+        *p=t;
+        return;
+    }
+    q=*p;
+    for(j=1; (j<i)&& (q!=NULL); j++){
+        q=q->next;
+    }
+    if(q==NULL){
+        return;
+    }
+    x=q;
+    t->next=x->next;
+    x->next=t;
+    return;
+}
+
+// deletion
+void delete(intnode **p, int i){
+    intnode *x, *y;
+    int j;
+    y=*p;
+    if(i==0){
+        *p=(*p)->next;
+        free(y);
+        return;
+    }
+    x=y->next;
+    for(j=1; (j<i)&&(x!=NULL); j++){
+        y=x;
+        x=x->next;
+    }
+    if((x==NULL) && (j<=i)){
+        return;
+    }
+    y->next=x->next;
+    x->next=NULL;
+    free(x);
+    return;
+}
+
+// reverse
+intnode *reverse(intnode *p){
+    intnode *l, *q, *n;
+    l=NULL;
+    q=p;
+    n=q->next;
+    while(q->next != NULL){
+        q->next=l;
+        l=q;
+        q=n;
+        n=q->next;
+    }
+    q->next=l;
+    return q;
 }
 
 // main program
@@ -57,5 +120,19 @@ int main(){
     }
     node = create(n); //  create a linked list
     traverse(node); // traverse linked list
+
+    intnode *temp = (intnode*)malloc(sizeof(intnode));
+    int pos;
+    printf("Enter data for new element : ");
+    scanf("%d", &(temp->element));
+    printf("Enter position you want to add : ");
+    scanf("%d", &pos);
+
+    insert(&node, temp, pos);
+    traverse(node);
+    delete(&node, 3);
+    traverse(node);
+    intnode *reversedNode = reverse(node);
+    traverse(reversedNode);
     return 0;
 }
