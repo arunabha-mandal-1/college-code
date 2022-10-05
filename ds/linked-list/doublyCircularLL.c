@@ -161,13 +161,13 @@ int main(){
     printf("Total %d elements.\n", num);
     traverse(start);
 
-    insert(&start, 100, 5);
-    insert(&start, 101, 6);
-    num=numberOfElements(start);
-    printf("Total %d elements.\n", num);
-    traverse(start);
-
-    // delete(&start, 5);
+    // insert(&start, 100, 0);
+    // insert(&start, 101, 1);
+    // num=numberOfElements(start);
+    // printf("Total %d elements.\n", num);
     // traverse(start);
+
+    delete(&start, 5);
+    traverse(start);
     return 0;
 }
